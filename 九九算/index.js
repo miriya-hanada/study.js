@@ -1,3 +1,4 @@
+// varを使用して数字という変数を作る
 var 数字１ = Math.ceil(Math.random() * 9);
 var 数字２ = Math.ceil(Math.random() * 9);
 var 結果 = 数字１ * 数字２;
@@ -19,11 +20,13 @@ form.append(ボタン);
 var 結果枠 = document.createElement('div');
 document.body.append(結果枠);
 
-
+// form使用するとき必須ソースコード
 form.addEventListener('submit', function コールバック関数　(e) {
   e.preventDefault();
   if (結果 === Number(入力枠.value)) {
     結果枠.textContent = '正解';
+    // 問題文と答えが合った時、新しい問題文を出す
+    // varを使用しないのは既存のものを修正するという意味（変数を変える時）
     数字１ = Math.ceil(Math.random() * 9);
     数字２ = Math.ceil(Math.random() * 9);
     結果 = 数字１ * 数字２;
