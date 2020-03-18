@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地雷ゲーム</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        td { 
+            border: 1px solid #bbb;
+            text-align: center;
+            line-height: 20px;
+            width: 20px;
+            height: 20px;
+            background: #222;
+         }
+        td.opened {
+            background: white;
+        }
+        td.flag {
+            background: red;
+        }
+        td.question {
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+    <input id="hor" type="number" placeholder="横" value="10">
+    <input id="ver" type="number" placeholder="縦" value="10">
+    <input id="mine" type="number" placeholder="地雷" value="20">
+    <button id="exec">実行</button>
+    <table id="table">
+        <thead>
+            <tr>
+                <td><span id="timer">0</span>秒</td>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div id="result"></div>
+    <script src="index.js"></script>
+</body>
+</html>
